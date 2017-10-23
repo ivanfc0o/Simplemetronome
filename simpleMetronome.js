@@ -1,5 +1,4 @@
 /* @author: Iván Ibarra - ivanfc0o@gmail.com - @ivanfc0o:github */
-
 var metronome = metronome||{};
 const context = new (window.AudioContext||window.webkitAudioContext)();
 var interval;
@@ -8,7 +7,6 @@ var interval;
  * High: The beep that is made on the first beat of the bar
  * inspired by @joereynolds:github
  */
-
 const frequencies = {
     low: 880.0,
     high: 1760.0
@@ -54,15 +52,3 @@ metronome.init = function(){
 	metronome.fns.play();
 }
 window.onload = metronome.init;
-
-
-/*
-$(function(){
-	$("#range-metronome").on("change", function(){
-		metronome.fns.changebpm();
-	});
-
-	$("#stop").click(function(){ metronome.fns.stop(); })
-	metronome.fns.play();
-});
-*/
